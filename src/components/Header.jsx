@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <a href="/" className="logo-link">
-          <FontAwesomeIcon icon={faShieldDog} className="header-icon" />
-          <span className="header-title">Dog Store</span>
+        <a href="/" className="link">
+          <FontAwesomeIcon icon={faShieldDog} className="fa-icon" />
+          <span className="brand-title">Dog Store</span>
         </a>
-        <nav className="nav-bar">
+        <nav className="nav">
           <ul>
             <li>
               <a href="/" className="nav-link">
@@ -33,10 +33,7 @@ const Header = () => {
             </li>
             <li>
               <a href="/cart">
-                <FontAwesomeIcon
-                  icon={faCartShopping}
-                  className="header-icon"
-                />
+                <FontAwesomeIcon icon={faCartShopping} className="nav-link" />
               </a>
             </li>
           </ul>
