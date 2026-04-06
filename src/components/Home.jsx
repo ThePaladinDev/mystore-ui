@@ -1,4 +1,6 @@
 import PageHeading from './PageHeading';
+import ProductListings from './ProductListings';
+import products from '../data/products';
 
 const Home = () => {
   return (
@@ -6,6 +8,7 @@ const Home = () => {
       <PageHeading title="Welcome">
         Here are all of our furry friends...
       </PageHeading>
+      <ProductListings products={products} />
     </div>
   );
 };
