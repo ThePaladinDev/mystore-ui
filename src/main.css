@@ -3,9 +3,9 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-primary: 'Karla';
+  --font-primary: 'Karla', sans-serif;
   --color-primary: #b5215a;
   --color-dark: #911d4a;
-  --color-lighter: fff2f7;
+  --color-lighter: #fff2f7;
   --color-light: #ffd8e7;
 }

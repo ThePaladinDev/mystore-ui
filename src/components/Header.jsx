@@ -2,38 +2,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldDog, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+  const navLinkClass =
+    'text-center text-lg font-primary font-semibold text-primary py-2';
+
   return (
-    <header className="header">
-      <div className="container">
-        <a href="/" className="link">
-          <FontAwesomeIcon icon={faShieldDog} className="fa-icon" />
-          <span className="brand-title">Dog Store</span>
+    <header className="border-b border-gray-300 sticky top-0 z-20 bg-gray-100">
+      <div className="flex items-center justify-between mx-auto max-w-[1152px] px-6 py-4">
+        <a href="/" className={navLinkClass}>
+          <FontAwesomeIcon icon={faShieldDog} className="h-8 w-8" />
+          <span className="font-bold">Dog Store</span>
         </a>
-        <nav className="nav">
-          <ul>
+        <nav className="flex items-center py-2 z-10">
+          <ul className="flex space-x-6">
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className={navLinkClass}>
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="nav-link">
+              <a href="/about" className={navLinkClass}>
                 About
               </a>
             </li>
             <li>
-              <a href="/contact" className="nav-link">
+              <a href="/contact" className={navLinkClass}>
                 Contact
               </a>
             </li>
             <li>
-              <a href="/login" className="nav-link">
+              <a href="/login" className={navLinkClass}>
                 Login
               </a>
             </li>
             <li>
               <a href="/cart">
-                <FontAwesomeIcon icon={faCartShopping} className="nav-link" />
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  className="text-primary py-2"
+                />
               </a>
             </li>
           </ul>
