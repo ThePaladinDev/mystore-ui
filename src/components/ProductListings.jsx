@@ -57,17 +57,20 @@ const ProductListings = ({ products }) => {
           handleSort={(value) => handleSortChange(value)}
         />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 py-12">
-        {filteredAndSortedProducts.length > 0 ? (
-          filteredAndSortedProducts.map((product) => {
+      {/* Display Products */}
+      {filteredAndSortedProducts.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 py-12">
+          {filteredAndSortedProducts.map((product) => {
             return <ProductCard key={product.productId} product={product} />;
-          })
-        ) : (
-          <p className="text-center font-primary font-bold text-lg text-primary">
+          })}
+        </div>
+      ) : (
+        <div className="gap-y-8 gap-x-6 py-12">
+          <p className="text-center font-primary font-bold text-3xl text-primary dark:text-light">
             No dogs found :(
           </p>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -29,7 +29,9 @@ const Home = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <span className="text-xl font-semibold">Loading products...</span>
+        <span className="text-xl font-semibold text-primary dark:text-light">
+          Loading products...
+        </span>
       </div>
     );
   }
@@ -37,7 +39,9 @@ const Home = () => {
   if (error) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <span className="text-xl text-red-500">Error: {error}</span>
+        <span className="text-xl text-red-700 dark:text-red-500">
+          Error: {error}
+        </span>
       </div>
     );
   }
