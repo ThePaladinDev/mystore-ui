@@ -4,7 +4,7 @@ import errorImg from '../assets/status-images/error.png';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export const Error = () => {
+const Error = () => {
   const error = useRouteError();
 
   const containerStyle = {
@@ -74,3 +74,5 @@ export const Error = () => {
     </div>
   );
 };
+
+export default Error;

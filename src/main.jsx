@@ -9,7 +9,7 @@ import {
   RouterProvider,
 } from 'react-router';
 import Home from './components/Home.jsx';
-import { Error } from './pages/Error.jsx';
+import Error from './pages/Error.jsx';
 
 const routeDefinitions = createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<Error />}>
