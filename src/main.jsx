@@ -15,11 +15,17 @@ import Contact from './components/Contact.jsx';
 import Login from './components/Login.jsx';
 import Cart from './components/Cart.jsx';
 import ProductDetail from './components/ProductDetail.jsx';
+import { loader as productsLoader } from './components/Home.jsx';
 
 const routeDefinitions = createRoutesFromElements(
-  <Route path="/" element={<App />} errorElement={<Error />}>
-    <Route index element={<Home />} />
-    <Route path="/home" element={<Home />} />
+  <Route
+    path="/"
+    element={<App />}
+    errorElement={<Error />}
+    hydrateFallbackElement={<App />}
+  >
+    <Route index element={<Home />} loader={productsLoader} />
+    <Route path="/home" element={<Home />} loader={productsLoader} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/login" element={<Login />} />

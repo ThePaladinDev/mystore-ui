@@ -1,13 +1,24 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 
 function App() {
+  const navigation = useNavigation();
+  const isPageLoading = navigation.state === 'loading';
+
   return (
     <div>
       <Header />
-      <Outlet />
+      {isPageLoading ? (
+        <div className="flex items-center justify-center min-h-screen">
+          <span className="text-xl font-semibold text-primary dark:text-light">
+            Loading products...
+          </span>
+        </div>
+      ) : (
+        <Outlet />
+      )}
       <Footer />
     </div>
   );
