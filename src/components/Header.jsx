@@ -62,17 +62,32 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={navLinkClass}>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => {
+                  return isActive ? `underline ${navLinkClass}` : navLinkClass;
+                }}
+              >
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className={navLinkClass}>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => {
+                  return isActive ? `underline ${navLinkClass}` : navLinkClass;
+                }}
+              >
                 Contact
               </NavLink>
             </li>
             <li>
-              <NavLink to="/login" className={navLinkClass}>
+              <NavLink
+                to="/login"
+                className={({ isActive }) => {
+                  return isActive ? `underline ${navLinkClass}` : navLinkClass;
+                }}
+              >
                 Login
               </NavLink>
             </li>
