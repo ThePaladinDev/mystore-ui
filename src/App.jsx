@@ -10,9 +10,9 @@ function App() {
     <div>
       <Header />
       {isPageLoading ? (
-        <div className="flex items-center justify-center min-h-screen">
-          <span className="text-xl font-semibold text-primary dark:text-light">
-            Loading products...
+        <div className="flex items-center justify-center min-h-[852px]">
+          <span className="text-4xl font-semibold text-primary dark:text-light">
+            Loading...
           </span>
         </div>
       ) : (
