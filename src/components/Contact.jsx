@@ -1,13 +1,8 @@
-import {
-  Form,
-  redirect,
-  useActionData,
-  useNavigation,
-  useSubmit,
-} from 'react-router';
+import { Form, useActionData, useNavigation, useSubmit } from 'react-router';
 import PageTitle from './PageTitle';
 import { useEffect, useRef } from 'react';
 import apiClient from '../api/apiClient';
+import { toast } from 'react-toastify';
 
 export const action = async ({ request, params }) => {
   const data = await request.formData();
@@ -22,7 +17,6 @@ export const action = async ({ request, params }) => {
   try {
     await apiClient.post('/contacts', contactData);
     return { success: true };
-    // return redirect('/home');
   } catch (err) {
     throw new Response(
       err.message || 'Failed to submit your message. Please try again.',
@@ -41,6 +35,7 @@ const Contact = () => {
   useEffect(() => {
     if (actionData?.success) {
       formRef.current?.reset();
+      toast.success('Your message has been submitted successfully!');
     }
   }, [actionData]);
 
