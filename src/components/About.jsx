@@ -5,10 +5,10 @@ const About = () => {
   const pStyle = 'text-gray-600 dark:text-lighter';
 
   return (
-    <div className="max-w-[1152px] min-h-[852px] mx-auto px-6 py-8 font-primary">
+    <div className="max-w-[600px] min-h-[852px] mx-auto px-6 py-8 font-primary">
       <PageTitle title="About" />
       {/* About Us Content */}
-      <p className="leading-6 mb-8 text-gray-600 dark:text-lighter">
+      <p className="leading-6 mt-4 mb-8 text-center text-gray-600 dark:text-lighter">
         <span className="text-lg font-semibold text-primary dark:text-light">
           The Dog Store
         </span>{' '}
@@ -20,7 +20,7 @@ const About = () => {
       </p>
 
       {/* Why Choose Us Section */}
-      <h2 className="text-2xl leading-[32px] font-bold text-primary dark:text-light mb-6">
+      <h2 className="text-center text-2xl leading-[32px] font-bold text-primary dark:text-light mb-6">
         Why Choose Our Pups?
       </h2>
 
