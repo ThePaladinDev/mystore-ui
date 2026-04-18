@@ -7,6 +7,7 @@ import {
 } from 'react-router';
 import PageTitle from './PageTitle';
 import { useEffect, useRef } from 'react';
+import apiClient from '../api/apiClient';
 
 export const action = async ({ request, params }) => {
   const data = await request.formData();
